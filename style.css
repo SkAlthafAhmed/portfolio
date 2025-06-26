@@ -1,0 +1,146 @@
+:root {
+  --main: #00e0ff;
+  --accent: #8e2de2;
+  --glass: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Unbounded', cursive;
+  background: linear-gradient(to right, #020024, #090979, #00d4ff);
+  background-size: 400% 400%;
+  animation: bgFlow 15s ease infinite;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+@keyframes bgFlow {
+  0% {background-position: 0% 50%}
+  50% {background-position: 100% 50%}
+  100% {background-position: 0% 50%}
+}
+
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 100px 20px 40px;
+}
+
+.hero {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--main), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.legend-reveal {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 30px var(--main);
+  margin: 20px auto;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.tagline {
+  font-size: 1rem;
+  color: #dff;
+  margin-top: 10px;
+}
+
+.btns {
+  margin-top: 25px;
+}
+
+.btns a {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 20px;
+  background: white;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btns a:hover {
+  background: var(--main);
+  color: white;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.card {
+  background: var(--glass);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li::before {
+  content: \"✨ \";
+  margin-right: 6px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #00ffff;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #ccc;
+  font-size: 0.9rem;
+}
